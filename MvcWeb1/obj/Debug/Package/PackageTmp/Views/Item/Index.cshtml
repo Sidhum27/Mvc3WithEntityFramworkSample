@@ -1,0 +1,78 @@
+﻿@model IEnumerable<MvcWeb1.Models.Item>
+
+@{
+    ViewBag.Title = "Item";
+}
+
+<h2>List of your items</h2>
+
+<p>
+ <span class="stext">     @Html.ActionLink("Create New", "Create") </span>
+</p>
+<table>
+    <tr>
+        <th>
+         
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Category
+        </th>
+        <th>
+            ItemPrice
+        </th>
+        <th>
+            Quantity avaiable
+        </th>
+        <th>
+            DateAdded
+        </th>
+       <th>
+            Owner
+        </th>
+        <th>
+            Info
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    //if (item.UserName.Equals(@User.Identity.Name))
+   // {}
+    <tr>
+        <td>
+           <img src="@Html.DisplayFor(modelItem => item.ItemPic)" width="70px" height="70px" alt="@item.Name" />
+        </td>
+        <td>
+           <a href="Item/Details/@Html.DisplayFor(modelItem => item.ItemID)" >@Html.DisplayFor(modelItem => item.Name)</a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.Name) 
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateAdded)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Info)
+        </td>
+        <td><span class="stext">
+            @Html.ActionLink("Edit", "Edit", new { id = item.ItemID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ItemID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ItemID })
+            </span>
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,547 @@
+﻿/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+body {
+    background-color: #F5F5F5;
+    font-size: .75em;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+   /* margin: 0;*/
+    padding: 0;
+    width: 900px;
+    margin:auto;
+    text-shadow: 0px -1.5px 0px white;
+    line-height: 1.6em;
+    background: url(http://mehdix.co.uk/online-complaint/pics/bg_img_p.png) top right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color:#292A2A;
+}
+
+
+a:link {
+  /*  color: #034af3;*/
+    color: #2869a1;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #505abc;
+}
+
+a:hover {
+    color: #1d60ff;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #12eb87;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6em;
+    text-shadow: 0px -1.5px 0px;
+    color:#696969;
+    margin-top:0px;
+}
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: #000;
+}
+
+h1 {
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    padding: 0 0 10px 0;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+.page {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header, #header {
+    position: relative;
+    margin-bottom: 0px;
+    color: #000;
+    padding: 0;
+}
+
+header h1, #header h1 {
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 0;
+    color: #fff;
+    border: none;
+    line-height: 2em;
+    font-size: 32px !important;
+    text-shadow: 1px 1px 2px #111;
+}
+
+#main {
+    padding: 0px 0px 15px 0px;
+  /*  background-color: #fff;
+    border-radius: 4px 0 0 0;
+    -webkit-border-radius: 4px 0 0 0;
+    -moz-border-radius: 4px 0 0 0;*/
+    background-color: white;
+    overflow: auto;
+    border-left: 0px solid #c7c7c8;
+    border-right: 0px solid #c7c7c8;
+}
+
+.left_body 
+{
+    width: 550px;
+    border: 0px solid green;
+    float: left;
+    clear: right;
+    margin-left:0px;
+        
+}
+
+.right_body
+{
+    width: 250px;
+    border: 0px solid green;
+    margin-left: 5px;
+    margin-top: 50px;
+    float: right;
+    clear: right;
+}
+
+.quote-box
+{
+    border: 1px solid #e8eef4;
+    padding:5px;
+    margin:3px;
+    background-color: #fff;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-box-shadow: 3px 3px 3px #F0F8FF;
+    -moz-box-shadow: 3px 3px 3px #F0F8FF;
+}
+.quote-box:hover
+{
+   background-color: #e8eef4; 
+}
+
+.list-view
+{
+   border: 0px solid white;
+   padding:5px;
+   overflow:auto;
+}
+
+.list-view:hover
+{
+    border: 0px solid #e8eef4;
+   background-color: #f4f7fa;
+    -webkit-border-radius: 0px 3px 3px 3px;
+    -moz-border-radius: 0px 3px 3px 3px;
+    -webkit-box-shadow: 3px 3px 3px #F0F8FF;
+    -moz-box-shadow: 3px 3px 3px #F0F8FF;
+}
+
+footer, 
+#footer {
+    border:1px solid #c7c7c8;
+    border-top:1px solid #2869a1;
+    color: #999;
+    padding: 10px;
+   /* text-align: center; */
+    line-height: normal;
+    margin: 0 0 15px 0;
+    font-size: .9em;
+    border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    overflow:auto;
+}
+.footer_left
+{
+    float:left;
+}
+.footer_right
+{
+    float:right;
+    text-align: right; 
+}
+
+/* TAB MENU   
+----------------------------------------------------------*/
+ul#menu 
+{
+    border-top: 1px #5C87B2 solid;
+    border-bottom: 1px #5C87B2 solid;
+    padding: 1px 0 1px;
+    position: relative;
+    margin: 0;
+    text-align: left;
+}
+
+ul#menu li {
+    display: inline;
+    list-style: none;
+}
+
+ul#menu li#greeting {
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    color: #fff;
+}
+
+ul#menu li a {
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    background-color: #e8eef4;
+    color: #034af3;
+    text-shadow: 0px -1px 0px white;
+  /*  border-radius: 4px 4px 0 0; 
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0; */
+}
+
+ul#menu li a:hover {
+    background-color: #fff;
+    text-decoration: none;
+}
+
+ul#menu li a:active {
+    background-color: #a6e2a6;
+    text-decoration: none;
+}
+
+ul#menu li.selected a {
+    background-color: #fff;
+    color: #000;
+}
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset {
+    border: 1px solid #f4f7fa;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/*
+textarea {
+    min-height: 75px;
+}
+
+input[type="text"], 
+input[type="password"] {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+    width: 200px;
+}
+
+select {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+}
+
+input[type="submit"] {
+    font-size: 1.2em;
+    padding: 5px;
+}
+*/
+/* TABLE
+----------------------------------------------------------*/
+
+table {
+    border: solid 1px #e8eef4;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 5px;
+    border: solid 1px #e8eef4;
+}
+
+table th {
+    padding: 6px 5px;
+    text-align: left;
+    background-color: #e8eef4;
+    border: solid 1px #e8eef4;
+}
+
+table th:hover{
+    padding: 6px 5px;
+    text-align: left;
+    background-color: white;
+    border: solid 1px #e8eef4;
+}
+table tr:hover {
+    padding: 5px;
+    border: solid 1px #e8eef4;
+    background-color: #F5F5F5;
+
+}
+
+/* MISC  
+----------------------------------------------------------*/
+.clear {
+    clear: both;
+}
+
+.error {
+    color: Red;
+}
+
+nav, 
+#menucontainer {
+    margin-top: 40px;
+}
+
+div#title {
+    display: block;
+    float: left;
+    text-align: left;
+}
+
+.page_title
+{
+    font-size:3em;
+    margin-bottom:10px;
+    margin-top:7px;
+    color: #87CEFA;
+    font-family: impact;
+}
+
+.page_title:hover
+{
+    text-shadow: 1px 1px 1px #BEBEBE;
+}
+    
+#logindisplay {
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    margin: 10px;
+   /* color: #87CEFA;*/
+}
+
+#logindisplay a:link {
+    color: green;
+    text-decoration: none;
+}
+
+#logindisplay a:visited {
+    color: green;
+    text-decoration: none;
+}
+
+#logindisplay a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #ff0000;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label, 
+.editor-label {
+    margin: 1em 0 0 0;
+    color:Gray;
+    font-size: 0.8em; 
+}
+
+.display-field, 
+.editor-field {
+    margin: 0.5em 0 0 0;
+    width:60%;
+    padding:3px;
+}
+
+.text-box {
+    width: 30em;
+}
+
+.text-box.multi-line {
+    height: 6.5em;
+}
+
+.tri-state {
+    width: 6em;
+}
+
+/*----*/
+
+.sbutton, input[type="submit"] 
+{
+     width:205px; 
+     color: White;
+     background:#87CEFA;
+     border:1px solid #E8EEF4;
+    height:30px;
+    font-size: 1em;
+    padding: 2px;
+    font-size: 1.3em;
+}
+.sbutton:hover, input[type="submit"]:hover
+{
+     color: #77a3cb;
+     background-color:White;
+     border:1px solid #E8EEF4;
+}
+
+
+
+
+textarea 
+{
+    width:200px;
+    min-height: 75px;
+    border: 1px solid #E8EEF4;
+}
+
+textarea:hover {
+    border:1px solid #87CEFA;
+}
+
+input[type="text"],select, 
+input[type="password"] {
+    border: 1px solid #E8EEF4;
+    width:200px;
+    padding: 2px;
+    font-size: 1.3em;
+  /*   border-radius: 4px 0 0 0;
+    -webkit-border-radius: 4px 4x 4x 4x;
+    -moz-border-radius: 4px 0 0 0;
+*/
+}
+
+
+input[type="text"]:hover, select:hover,
+input[type="password"]:hover
+.input:hover
+{
+    border:1px solid #87CEFA;
+} 
+
+select {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+}
+
+/********************/
+.stext {
+   font-size: 0.8em;     
+}
+
+.stext_gray {
+   font-size: 0.8em;  
+   color: Gray;   
+}
+
+.pic_right_top 
+{
+    float:right;
+}
+
+.display-field:hover 
+{
+    background-color: #f4f7fa; 
+}
+
+.user_picture 
+{
+ width: 90px;
+ float:left;
+}
+
+.error-msg
+{
+    color: Red;
+    border: 1px solid red;
+    padding: 2px;   
+    margin:3px; 
+}
+
+.ok-msg
+{
+    color: green;
+    border: 1px solid green;
+    padding: 2px;   
+    margin:3px; 
+}
+
+.text_right
+{
+    text-align:right;
+}

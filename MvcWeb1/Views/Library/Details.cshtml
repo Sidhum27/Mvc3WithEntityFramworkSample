@@ -1,0 +1,37 @@
+﻿<!-- to be deleted -->
+
+@model MvcWeb1.Models.Library
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Library</legend>
+
+    <div class="display-label">Friendship</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Friendship.FriendshipName)
+    </div>
+
+    <div class="display-label">Item</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Item.Name)
+    </div>
+
+    <div class="display-label">DateAdded</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateAdded)
+    </div>
+
+    <div class="display-label">Note</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Note)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.LibraryID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

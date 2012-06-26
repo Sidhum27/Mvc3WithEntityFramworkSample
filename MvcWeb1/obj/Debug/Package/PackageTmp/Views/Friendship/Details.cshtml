@@ -1,0 +1,43 @@
+﻿@model MvcWeb1.Models.Friendship
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Friendship</legend>
+    <div class="display-label">FriendshipName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FriendshipName)
+    </div>
+    <div class="display-label">UserName1</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName1)
+    </div>
+
+    <div class="display-label">UserName2</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName2)
+    </div>
+
+    <div class="display-label">DateAdded</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateAdded)
+    </div>
+
+    <div class="display-label">Status1</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status1)
+    </div>
+
+    <div class="display-label">Status2</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status2)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FriendshipID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

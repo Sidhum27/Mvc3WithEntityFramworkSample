@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MvcWeb1.Models.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>list of users</h2>
+
+<p>
+@{
+    if(Model.Where(c => c.UserName.Equals(@User.Identity.Name)).Count() > 0){
+    }else{
+    @Html.ActionLink("PLease complete your registration", "Create")
+    }
+}
+</p> 
+
+<table>
+    <tr>
+         <th>
+        </th>
+        <th>
+            User Name
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Email address
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img src="@Html.DisplayFor(modelItem => item.UserPic)" width="50px" height="50px" alt="" title="@Html.DisplayFor(modelItem => item.Bio)" /> 
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+          <a href="User/Details/@Html.DisplayFor(modelItem => item.UserID)"> @Html.DisplayFor(modelItem => item.Name) </a>
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.EmailAddress)
+        </td>
+        <td>
+     @{ if (@User.Identity.Name.Equals(@item.UserName)){
+            <span >This is you</span>
+        }else{
+            @Html.ActionLink("Request Friendship", "../Friendship/Create", new { user = item.UserName }) <span > | </span>
+            @Html.ActionLink("Request Item", "../Library/Create", new { user = item.UserName }) 
+       
+        }}
+        </td>
+    </tr>
+}
+
+</table>

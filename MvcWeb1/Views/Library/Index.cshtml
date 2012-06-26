@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MvcWeb1.Models.Library>
+
+@{
+    ViewBag.Title = "library";
+}
+
+<h2>Items in your library</h2>
+
+<table>
+    <tr>
+        <th>
+            Item
+        </th>
+        <th>
+            Friendship
+        </th>
+        <th>
+            DateAdded
+        </th>
+        <th>
+            Note
+        </th>
+        <th>Action</th>
+    </tr>
+
+@foreach (var item in Model) {
+     if (item.Friendship.UserName1.Equals(@User.Identity.Name) || item.Friendship.UserName2.Equals(@User.Identity.Name))
+    {
+    <tr>
+        <td valign="top">
+           <img src="@Html.DisplayFor(modelItem => item.Item.ItemPic)" width="70px" height="70px" alt="@Html.DisplayFor(modelItem => item.Item.Name)" />
+           <br />
+            @Html.ActionLink(item.Item.Name, "../Item/Details/", new { id = item.Item.ItemID })
+        </td>
+        <td valign="top">
+            @Html.ActionLink(item.Friendship.FriendshipName, "../Friendship/Details/", new { id = item.Friendship.FriendshipID })
+        </td>
+        <td valign="top">
+         @Html.Raw(item.DateAdded.ToString("ddd d MMM yyyy")) 
+        </td>
+        <td valign="top">
+            @Html.DisplayFor(modelItem => item.Note)
+        </td>
+        <td>
+        @{ 
+            if(item.Item.UserName.Equals(@User.Identity.Name)){
+                <span>This is your item</span>
+         }else{
+                @Html.ActionLink("Return", "Delete", new { id=item.LibraryID })
+            }
+            }
+        </td>
+    </tr>
+      }
+    else { 
+        // you cannot see other poeole librar
+    }
+}
+
+</table>

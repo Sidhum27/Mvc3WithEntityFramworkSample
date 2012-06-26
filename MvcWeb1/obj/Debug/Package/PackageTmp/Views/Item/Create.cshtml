@@ -1,0 +1,86 @@
+﻿@model MvcWeb1.Models.Item
+
+@{
+    ViewBag.Title = "Create";
+}
+  @User.Identity.Name
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Item</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-field">
+            @Html.HiddenFor(model => model.UserName)
+            @Html.ValidationMessageFor(model => model.UserName)
+        </div>        
+
+
+          <div class="editor-label">
+            @Html.LabelFor(model => model.CategoryID, "Category")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("CategoryID", String.Empty)
+            @Html.ValidationMessageFor(model => model.CategoryID)
+        </div>
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ItemPrice)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ItemPrice)
+            @Html.ValidationMessageFor(model => model.ItemPrice)
+        </div>
+
+         <div class="editor-label">
+            @Html.LabelFor(model => model.Quantity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Quantity)
+            @Html.ValidationMessageFor(model => model.Quantity)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DateAdded)
+        </div>
+        <div class="editor-field">@Model.DateAdded
+            @Html.HiddenFor(model => model.DateAdded)
+            @Html.ValidationMessageFor(model => model.DateAdded)
+        </div>
+         <div class="editor-label">
+            @Html.LabelFor(model => model.Info)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Info)
+            @Html.ValidationMessageFor(model => model.Info)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ItemPic)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ItemPic)
+            @Html.ValidationMessageFor(model => model.ItemPic)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -1,0 +1,63 @@
+﻿@model MvcWeb1.Models.User
+
+@{
+    ViewBag.Title = @Model.Name;
+}
+
+@ViewBag.imfriend
+
+ @ViewBag.itsok
+
+<h3>Profile</h3>
+    <div class="text_right">
+@{
+    if (@ViewBag.isYourFriend == null){
+            @Html.ActionLink("Request Friendship", "../Friendship/Create", new { user = Model.UserName}) <span >  </span>
+    }else{
+            @Html.ActionLink("Request Item", "../Library/Create", new { user = Model.UserName }) 
+    }
+}
+   </div>
+<fieldset>
+    <legend>@Model.UserName</legend>
+     <div class="pic_right_top">
+    <div class="display-field">
+       <img src="@Html.DisplayFor(model => model.UserPic)" width="300px" height="300px" /> 
+    </div>
+    </div>
+     <div class="display-label">Items</div>
+    <div class="display-field">
+     @Html.DropDownList("items", new SelectList(ViewBag.items))
+    </div>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">Bio</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Bio)
+    </div>
+
+    <div class="display-label">Email Address</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmailAddress)
+    </div>
+<!--
+    <div class="display-label">Address</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Adress)
+    </div>
+-->
+</fieldset>
+<p>
+@{
+    if(Model.UserName.Equals(@User.Identity.Name)){
+    @Html.ActionLink("Edit", "Edit", new { id=Model.UserID }) <span>|</span>
+    }else{
+    }
+    }
+
+    @Html.ActionLink("Back to List", "Index")
+</p>        

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="https://appharbor.com:443/applications/theotherlibraray/builds?authorization=KC%2b%2f8lINkEKEAT8Uovh4hcN6IWEZJstGh7fM%2bMGPYl4%3d" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="MyApp" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="MSDeploy" replaceMatchingFiles="True" userName="hzmehdi" savePWD="False" userPWD="" SelectedForPublish="True" />
+</publishData>

@@ -1,0 +1,132 @@
+﻿@model IEnumerable<MvcWeb1.Models.Friendship>
+
+@{
+    ViewBag.Title = "Friendship";
+}
+
+<h2>Friendship list</h2>
+@{
+    foreach (var item in Model)
+    {
+<div class="list-view">
+  @{ if (item.UserName1.Equals(@User.Identity.Name) || item.UserName2.Equals(@User.Identity.Name))
+     {
+     <span class="stext_gray">Friendship name: </span>
+       @Html.DisplayFor(modelItem => item.FriendshipName)
+  <br />
+      <span class="stext_gray">Requested by: </span>
+  if (item.UserName1.Equals(@User.Identity.Name))
+  {
+              <span style="color:Green;">@Html.DisplayFor(modelItem => item.UserName1) </span>
+  }
+  else
+  {
+              @Html.DisplayFor(modelItem => item.UserName1)
+  }
+
+  <span class="stext_gray">Confirmed by: </span>
+  if (item.UserName2.Equals(@User.Identity.Name))
+  {
+              <span style="color:Green;">@Html.DisplayFor(modelItem => item.UserName2) </span>
+  }
+  else
+  {
+              @Html.DisplayFor(modelItem => item.UserName2)
+  }
+
+  <span class="stext_gray"> On: </span>
+       @Html.Raw(item.DateAdded.ToString("ddd d MMM yyyy")) 
+  <div class="text_right">
+ <span class="stext">
+            @Html.ActionLink("Delete", "Delete", new { id = item.FriendshipID })
+</span>
+</div>
+      
+     }
+     else
+     {
+         // you cannot see other people friendship
+     }
+    }
+
+</div>
+    }
+}
+
+<br />
+@*<table>
+    <tr>
+         <th>
+            Friendship name
+         </th>
+        <th>
+            UserName1
+        </th>
+        <th>
+            UserName2
+        </th>
+        <th>
+            DateAdded
+        </th>
+        <th>
+            Status1
+        </th>
+        <th>
+            Status2
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+
+    if (item.UserName1.Equals(@User.Identity.Name) || item.UserName2.Equals(@User.Identity.Name))
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FriendshipName)
+        </td>
+        <td>@{ if (item.UserName1.Equals(@User.Identity.Name))
+               {
+              <span style="color:Green;">@Html.DisplayFor(modelItem => item.UserName1) </span>
+               }
+               else
+               {
+              @Html.DisplayFor(modelItem => item.UserName1)
+               }
+            }
+        </td>
+        <td>
+            @{ if (item.UserName2.Equals(@User.Identity.Name))
+               {
+              <span style="color:Green;">@Html.DisplayFor(modelItem => item.UserName2) </span>
+               }
+               else
+               {
+              @Html.DisplayFor(modelItem => item.UserName2)
+               }
+            }
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateAdded)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status2)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.FriendshipID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.FriendshipID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.FriendshipID })
+        </td>
+    </tr>
+    }
+    else { 
+        // you cannot see other people friendship
+    }
+}
+
+</table>
+*@

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<MvcWeb1.Models.Category>
+
+@{
+    ViewBag.Title = "Category";
+}
+
+<h2>Category list</h2>
+
+<table>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Info
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Info)
+        </td>
+        <td> <span class="stext">
+            @Html.ActionLink("Edit", "Edit", new { id=item.CategoryID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CategoryID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CategoryID })
+            </span>
+        </td>
+    </tr>
+}
+
+</table>
+<br />
+<p>
+ <span class="stext">   @Html.ActionLink("Create New", "Create") </span>
+</p>

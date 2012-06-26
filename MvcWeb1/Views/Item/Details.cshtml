@@ -1,0 +1,63 @@
+﻿@model MvcWeb1.Models.Item
+
+@{
+    ViewBag.Title = "Details";
+}
+<h2>Details</h2>
+@{
+    if (@ViewBag.NoItemFound != null)
+    {
+        @Html.Raw(@ViewBag.NoItemFound)
+    }
+    else
+    {
+        
+<fieldset>
+    <legend>@Model.Name</legend>
+    <div class="pic_right_top">
+    <div class="display-field">
+        <img src="@Model.ItemPic" width="300px" height="300px" alt="" />
+    </div>
+    </div>
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+     <div class="display-label">Category</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category.Name)
+    </div>
+
+    <div class="display-label">ItemPrice</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ItemPrice)
+    </div>
+
+    <div class="display-label">Quantity avaiable</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Quantity)
+    </div>
+     <div class="display-label">Info</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Info)
+    </div>
+    <div class="display-label">DateAdded</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateAdded)
+    </div>
+
+    <div class="display-label">Owner</div>
+    <div class="display-field">
+     @Html.DisplayFor(model => model.UserName)
+    </div>
+
+</fieldset>
+   
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ItemID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+  }
+}

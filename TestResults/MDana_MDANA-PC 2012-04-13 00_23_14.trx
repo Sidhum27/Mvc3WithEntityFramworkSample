@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="72de6377-2fee-41e2-a358-baebf097fbb4" name="MDana@MDANA-PC 2012-04-13 00:23:14" runUser="MDana-PC\MDana" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="14b137cd-d033-4530-9fd6-caa6d43f6e91">
+    <Deployment runDeploymentRoot="MDana_MDANA-PC 2012-04-13 00_23_14">
+      <DeploymentItem filename="C:\Users\MDana\Desktop\y3\adv-web\assignment 2\MvcWeb1\MvcWeb1\bin\MvcWeb1.dll" />
+      <DeploymentItem filename="C:\Users\MDana\Desktop\y3\adv-web\assignment 2\MvcWeb1\MvcWeb1.Tests\bin\Debug\EntityFramework.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-04-13T00:23:14.1637507+01:00" queuing="2012-04-13T00:23:14.3107591+01:00" start="2012-04-13T00:23:14.3407609+01:00" finish="2012-04-13T00:23:15.5078276+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="3" executed="3" passed="2" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="About" storage="c:\users\mdana\desktop\y3\adv-web\assignment 2\mvcweb1\mvcweb1.tests\bin\debug\mvcweb1.tests.dll" id="d9add3db-379f-cb0e-4fbb-a27d89c05ffb">
+      <Execution id="793e9fc9-f843-47fc-afd0-ac243b58a6fe" />
+      <TestMethod codeBase="C:/Users/MDana/Desktop/y3/adv-web/assignment 2/MvcWeb1/MvcWeb1.Tests/bin/Debug/MvcWeb1.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcWeb1.Tests.Controllers.HomeControllerTest, MvcWeb1.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\users\mdana\desktop\y3\adv-web\assignment 2\mvcweb1\mvcweb1.tests\bin\debug\mvcweb1.tests.dll" id="510f240a-f530-55da-ca1e-c7f3c0d2b24f">
+      <Execution id="8fbde86a-7056-43cf-af32-0c495c78fa8a" />
+      <TestMethod codeBase="C:/Users/MDana/Desktop/y3/adv-web/assignment 2/MvcWeb1/MvcWeb1.Tests/bin/Debug/MvcWeb1.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcWeb1.Tests.Controllers.HomeControllerTest, MvcWeb1.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="IndexTest" storage="c:\users\mdana\desktop\y3\adv-web\assignment 2\mvcweb1\mvcweb1.tests\bin\debug\mvcweb1.tests.dll" id="33d5e2ea-f5a7-3fe1-72c0-419c6b88b5fa">
+      <Execution id="37910fcc-e4cc-4120-a502-167216a3810f" />
+      <TestMethod codeBase="C:/Users/MDana/Desktop/y3/adv-web/assignment 2/MvcWeb1/MvcWeb1.Tests/bin/Debug/MvcWeb1.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcWeb1.Tests.CategoryControllerTest, MvcWeb1.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IndexTest" />
+      <AspNet webSiteUrl="http://localhost:55762/">
+        <Host pathToWebApp="C:\Users\MDana\Desktop\y3\adv-web\assignment 2\MvcWeb1\MvcWeb1" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="33d5e2ea-f5a7-3fe1-72c0-419c6b88b5fa" executionId="37910fcc-e4cc-4120-a502-167216a3810f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="510f240a-f530-55da-ca1e-c7f3c0d2b24f" executionId="8fbde86a-7056-43cf-af32-0c495c78fa8a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d9add3db-379f-cb0e-4fbb-a27d89c05ffb" executionId="793e9fc9-f843-47fc-afd0-ac243b58a6fe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="37910fcc-e4cc-4120-a502-167216a3810f" testId="33d5e2ea-f5a7-3fe1-72c0-419c6b88b5fa" testName="IndexTest" computerName="MDANA-PC" startTime="2012-04-13T00:23:14.3557617+01:00" endTime="2012-04-13T00:23:15.1688082+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="37910fcc-e4cc-4120-a502-167216a3810f">
+      <Output>
+        <ErrorInfo>
+          <Message>The Web request 'http://localhost:55762/' completed successfully without running the test. This can occur when configuring the Web application for testing fails (an ASP.NET server error occurs when processing the request), or when no ASP.NET page is executed (the URL may point to an HTML page, a Web service, or a directory listing). Running tests in ASP.NET requires the URL to resolve to an ASP.NET page and for the page to execute properly up to the Load event. The response from the request is stored in the file 'WebRequestResponse_IndexTest.html' with the test results; typically this file can be opened with a Web browser to view its contents.</Message>
+        </ErrorInfo>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="MDANA-PC\WebRequestResponse_IndexTest.html" />
+      </ResultFiles>
+    </UnitTestResult>
+    <UnitTestResult executionId="8fbde86a-7056-43cf-af32-0c495c78fa8a" testId="510f240a-f530-55da-ca1e-c7f3c0d2b24f" testName="Index" computerName="MDANA-PC" duration="00:00:00.0516830" startTime="2012-04-13T00:23:15.1788088+01:00" endTime="2012-04-13T00:23:15.4428239+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8fbde86a-7056-43cf-af32-0c495c78fa8a">
+    </UnitTestResult>
+    <UnitTestResult executionId="793e9fc9-f843-47fc-afd0-ac243b58a6fe" testId="d9add3db-379f-cb0e-4fbb-a27d89c05ffb" testName="About" computerName="MDANA-PC" duration="00:00:00.0003170" startTime="2012-04-13T00:23:15.4548246+01:00" endTime="2012-04-13T00:23:15.4638251+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="793e9fc9-f843-47fc-afd0-ac243b58a6fe">
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -1,0 +1,83 @@
+﻿@model MvcWeb1.Models.Friendship
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    if (string.IsNullOrEmpty(@ViewBag.friendshiperror))
+    {
+        @ViewBag.friendshiperror
+    }
+    else
+    {
+    <fieldset>
+        <legend>Friendship</legend>
+
+        @Html.HiddenFor(model => model.FriendshipID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FriendshipName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FriendshipName)
+            @Html.ValidationMessageFor(model => model.FriendshipName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserName1)
+        </div>
+        <div class="editor-field">@Model.UserName1
+            @Html.HiddenFor(model => model.UserName1)
+            @Html.ValidationMessageFor(model => model.UserName1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserName2)
+        </div>
+        <div class="editor-field">@Model.UserName1
+            @Html.HiddenFor(model => model.UserName2)
+            @Html.ValidationMessageFor(model => model.UserName2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DateAdded)
+        </div>
+        <div class="editor-field"> @Model.DateAdded
+            @Html.HiddenFor(model => model.DateAdded)
+            @Html.ValidationMessageFor(model => model.DateAdded)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Status1)
+        </div>
+        <div class="editor-field"> @Model.Status1
+            @Html.HiddenFor(model => model.Status1)
+            @Html.ValidationMessageFor(model => model.Status1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Status2)
+        </div>
+        <div class="editor-field"> @Model.Status2
+            @Html.HiddenFor(model => model.Status2)
+            @Html.ValidationMessageFor(model => model.Status2)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+    }
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

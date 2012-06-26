@@ -1,0 +1,54 @@
+﻿@model IEnumerable<MvcWeb1.Models.Library>
+
+@{
+    ViewBag.Title = "library";
+}
+
+<h2>Items in your library</h2>
+
+<table>
+    <tr>
+        <th>
+            Friendship
+        </th>
+        <th>
+            Item
+        </th>
+        <th>
+            DateAdded
+        </th>
+        <th>
+            Note
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+     if (item.Friendship.UserName1.Equals(@User.Identity.Name) || item.Friendship.UserName2.Equals(@User.Identity.Name))
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Friendship.FriendshipName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateAdded)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Note)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LibraryID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LibraryID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LibraryID })
+        </td>
+    </tr>
+      }
+    else { 
+        // you cannot see other poeole librar
+    }
+}
+
+</table>

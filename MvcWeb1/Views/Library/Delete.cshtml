@@ -1,0 +1,38 @@
+﻿@model MvcWeb1.Models.Library
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to return this?</h3>
+<fieldset>
+    <legend>Library</legend>
+
+    <div class="display-label">Friendship</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Friendship.FriendshipName)
+    </div>
+
+    <div class="display-label">Item</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Item.Name)
+    </div>
+
+    <div class="display-label">DateAdded</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateAdded)
+    </div>
+
+    <div class="display-label">Note</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Note)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Return" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

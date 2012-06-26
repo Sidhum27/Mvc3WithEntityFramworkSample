@@ -1,0 +1,52 @@
+﻿@model MvcWeb1.Models.Item
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>@Model.Name</legend>
+    <div class="pic_right_top" >
+    <div class="display-field">
+      <img src="@Html.DisplayFor(model => model.ItemPic)" width="300px" height="300px" alt="@Model.Name" />
+    </div>
+    </div>
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">ItemPrice</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ItemPrice)
+    </div>
+
+    <div class="display-label">Quantity avaiable</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Quantity)
+    </div>
+
+    <div class="display-label">DateAdded</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateAdded)
+    </div>
+
+     <div class="display-label">Owner</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName)
+    </div>
+    <div class="display-label">Info</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Info)
+    </div>
+
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

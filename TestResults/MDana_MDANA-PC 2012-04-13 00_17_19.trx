@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="ffb15e1c-ad21-4e1a-9685-3a4ece0c393e" name="MDana@MDANA-PC 2012-04-13 00:17:19" runUser="MDana-PC\MDana" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="cd551a9a-e681-423d-b98e-270e11b8e26c">
+    <Deployment runDeploymentRoot="MDana_MDANA-PC 2012-04-13 00_17_19">
+      <DeploymentItem filename="C:\Users\MDana\Desktop\y3\adv-web\assignment 2\MvcWeb1\MvcWeb1\bin\MvcWeb1.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-04-13T00:17:19.5974707+01:00" queuing="2012-04-13T00:17:21.8345987+01:00" start="2012-04-13T00:17:21.9906076+01:00" finish="2012-04-13T00:17:22.7486509+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Index" storage="c:\users\mdana\desktop\y3\adv-web\assignment 2\mvcweb1\mvcweb1.tests\bin\debug\mvcweb1.tests.dll" id="510f240a-f530-55da-ca1e-c7f3c0d2b24f">
+      <Execution id="2c0c39a3-ef4d-4a99-a321-ce903c17eb7b" />
+      <TestMethod codeBase="C:/Users/MDana/Desktop/y3/adv-web/assignment 2/MvcWeb1/MvcWeb1.Tests/bin/Debug/MvcWeb1.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcWeb1.Tests.Controllers.HomeControllerTest, MvcWeb1.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="About" storage="c:\users\mdana\desktop\y3\adv-web\assignment 2\mvcweb1\mvcweb1.tests\bin\debug\mvcweb1.tests.dll" id="d9add3db-379f-cb0e-4fbb-a27d89c05ffb">
+      <Execution id="d2349999-736d-47da-b187-a7fd32c4c18b" />
+      <TestMethod codeBase="C:/Users/MDana/Desktop/y3/adv-web/assignment 2/MvcWeb1/MvcWeb1.Tests/bin/Debug/MvcWeb1.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcWeb1.Tests.Controllers.HomeControllerTest, MvcWeb1.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="510f240a-f530-55da-ca1e-c7f3c0d2b24f" executionId="2c0c39a3-ef4d-4a99-a321-ce903c17eb7b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d9add3db-379f-cb0e-4fbb-a27d89c05ffb" executionId="d2349999-736d-47da-b187-a7fd32c4c18b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="2c0c39a3-ef4d-4a99-a321-ce903c17eb7b" testId="510f240a-f530-55da-ca1e-c7f3c0d2b24f" testName="Index" computerName="MDANA-PC" duration="00:00:00.1527319" startTime="2012-04-13T00:17:22.0436106+01:00" endTime="2012-04-13T00:17:22.6586458+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2c0c39a3-ef4d-4a99-a321-ce903c17eb7b">
+    </UnitTestResult>
+    <UnitTestResult executionId="d2349999-736d-47da-b187-a7fd32c4c18b" testId="d9add3db-379f-cb0e-4fbb-a27d89c05ffb" testName="About" computerName="MDANA-PC" duration="00:00:00.0010103" startTime="2012-04-13T00:17:22.6786469+01:00" endTime="2012-04-13T00:17:22.6946478+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d2349999-736d-47da-b187-a7fd32c4c18b">
+    </UnitTestResult>
+  </Results>
+</TestRun>

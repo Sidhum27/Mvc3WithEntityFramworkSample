@@ -1,0 +1,9 @@
+C:\Users\MDana\Desktop\y3\adv-web\assignment 2\MvcWeb1\MvcWeb1.Tests\bin\Debug\MvcWeb1.Tests.dll.config
+C:\Users\MDana\Desktop\y3\adv-web\assignment 2\MvcWeb1\MvcWeb1.Tests\bin\Debug\MvcWeb1.Tests.dll
+C:\Users\MDana\Desktop\y3\adv-web\assignment 2\MvcWeb1\MvcWeb1.Tests\bin\Debug\MvcWeb1.Tests.pdb
+C:\Users\MDana\Desktop\y3\adv-web\assignment 2\MvcWeb1\MvcWeb1.Tests\bin\Debug\MvcWeb1.dll
+C:\Users\MDana\Desktop\y3\adv-web\assignment 2\MvcWeb1\MvcWeb1.Tests\bin\Debug\MvcWeb1.pdb
+C:\Users\MDana\Desktop\y3\adv-web\assignment 2\MvcWeb1\MvcWeb1.Tests\bin\Debug\EntityFramework.xml
+C:\Users\MDana\Desktop\y3\adv-web\assignment 2\MvcWeb1\MvcWeb1.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\MDana\Desktop\y3\adv-web\assignment 2\MvcWeb1\MvcWeb1.Tests\obj\Debug\MvcWeb1.Tests.dll
+C:\Users\MDana\Desktop\y3\adv-web\assignment 2\MvcWeb1\MvcWeb1.Tests\obj\Debug\MvcWeb1.Tests.pdb

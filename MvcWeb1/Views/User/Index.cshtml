@@ -1,0 +1,113 @@
+﻿@model IEnumerable<MvcWeb1.Models.User>
+
+@{
+    ViewBag.Title = "Users";
+}
+<h2>List of users</h2>
+
+<p> 
+
+@using (Html.BeginForm("Index", "User", FormMethod.Get))
+{
+    @Html.ValidationSummary(true) 
+        <label for="Index"></label> 
+         @Html.TextBox("search"); 
+        //<input type="text" name="search" />
+        <input type="submit" value=" Search by email " />
+}
+</p>
+
+@{
+    if(Model.Where(c => c.UserName.Equals(@User.Identity.Name)).Count() > 0){
+
+@ViewBag.notFriendYet
+
+
+foreach (var item in Model)
+{
+<div class="list-view">
+<div class="user_picture">
+<img src="@Html.DisplayFor(modelItem => item.UserPic)" width="80px" height="80px" alt="" title="@Html.DisplayFor(modelItem => item.Bio)" /> 
+</div>
+    <span class="stext_gray">Username: </span>@Html.DisplayFor(modelItem => item.UserName)
+    <br />
+ <span class="stext_gray">Name: </span><a href="User/Details/@Html.DisplayFor(modelItem => item.UserID)"> @Html.DisplayFor(modelItem => item.Name) </a>
+ <br />
+ <span class="stext_gray">Email: </span> @Html.DisplayFor(modelItem => item.EmailAddress)
+<div class="text_right">
+ <span class="stext">
+      @{ if (@User.Identity.Name.Equals(@item.UserName))
+        {
+            <span >This is you</span>
+        }
+        else
+        {
+            @Html.ActionLink("Request Friendship", "../Friendship/Create", new { user = item.UserName }) <span > | </span>
+            @Html.ActionLink("Request Item", "../Library/Create", new { user = item.UserName }) 
+        }
+      }
+ </span>
+ </div>
+
+</div>
+}
+
+@*
+<br /><br />
+<table>
+    <tr>
+         <th>
+        </th>
+        <th>
+            User Name
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Email address
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            <img src="@Html.DisplayFor(modelItem => item.UserPic)" width="50px" height="50px" alt="" title="@Html.DisplayFor(modelItem => item.Bio)" /> 
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+          <a href="User/Details/@Html.DisplayFor(modelItem => item.UserID)"> @Html.DisplayFor(modelItem => item.Name) </a>
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.EmailAddress)
+        </td>
+        <td>
+     @{ if (@User.Identity.Name.Equals(@item.UserName))
+        {
+            <span >This is you</span>
+        }
+        else
+        {
+            @Html.ActionLink("Request Friendship", "../Friendship/Create", new { user = item.UserName }) <span > | </span>
+            @Html.ActionLink("Request Item", "../Library/Create", new { user = item.UserName }) 
+       
+        }}
+        </td>
+    </tr>
+}
+
+</table>*@
+
+    }else{
+
+    <div class="error-msg">
+    No result Found
+    </div>
+    <br />
+    @Html.ActionLink("Please complete your registration", "Create")
+    }
+}

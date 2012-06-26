@@ -1,0 +1,122 @@
+﻿@model IEnumerable<MvcWeb1.Models.Message>
+
+@{
+    ViewBag.Title = "Messages";
+}
+
+<h2>Inbox and Outbox</h2>
+<div class="text_right">
+<span class="stext">
+Number of messages  @ViewBag.NumberOfMessage
+</span>
+</div>
+
+<p>
+    @Html.ActionLink("Compose Message", "Create")
+</p>
+
+@{
+    foreach (var item in Model)
+    {
+<div class="list-view">
+   <span class="stext_gray">Subject: </span>
+     @Html.DisplayFor(modelItem => item.MessageSubject)
+   <span class="stext_gray"> From: </span>
+
+        @{ if(item.FromUser.Equals(@User.Identity.Name)){
+            <span style="color:Green;">
+                @Html.DisplayFor(modelItem => item.FromUser)
+            </span>
+            }else{
+               @Html.DisplayFor(modelItem => item.FromUser)
+           }
+          }
+   <span class="stext_gray"> TO: </span>
+           @{ if(item.ToUser.Equals(@User.Identity.Name)){
+            <span style="color:Green;">
+                 @Html.DisplayFor(modelItem => item.ToUser)
+             </span>
+            }else{
+             @Html.DisplayFor(modelItem => item.ToUser)
+            }
+            }
+   <span class="stext_gray"> On: </span>
+            @Html.Raw(item.DateSend.ToString("ddd d MMM yyyy"))
+<br />
+<div style="background:white; padding:3px;">
+ @Html.DisplayFor(modelItem => item.MessageBody)
+</div>    
+    <div class="text_right">
+ <span class="stext">
+            @Html.ActionLink("Delete", "Delete", new { id=item.MessageID })
+</span>
+</div>
+
+
+</div>
+ 
+ } 
+ 
+}
+
+<br />
+@*<table>
+    <tr>
+        <th>
+            MessageSubject
+        </th>
+        <th>
+            FromUser
+        </th>
+        <th>
+            ToUser
+        </th>
+        <th>
+            MessageBody
+        </th>
+        <th>
+            DateSend
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MessageSubject)
+        </td>
+        <td>
+        @{ if(item.FromUser.Equals(@User.Identity.Name)){
+            <span style="color:Green;">
+                @Html.DisplayFor(modelItem => item.FromUser)
+            </span>
+            }else{
+               @Html.DisplayFor(modelItem => item.FromUser)
+           }
+          }
+        </td>
+        <td>
+            @{ if(item.ToUser.Equals(@User.Identity.Name)){
+            <span style="color:Green;">
+                 @Html.DisplayFor(modelItem => item.ToUser)
+             </span>
+            }else{
+             @Html.DisplayFor(modelItem => item.ToUser)
+            }
+            }
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MessageBody)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateSend)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.MessageID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MessageID })
+        </td>
+    </tr>
+}
+
+</table>*@

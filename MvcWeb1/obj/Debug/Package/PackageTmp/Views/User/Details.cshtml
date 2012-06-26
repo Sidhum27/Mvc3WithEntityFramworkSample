@@ -1,0 +1,56 @@
+﻿@model MvcWeb1.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@ViewBag.imfriend
+
+ @ViewBag.itsok
+<h2>Details</h2>
+@{
+   // you can only see your firends profile and yours of-course
+    // || @User.Identity.Name.Equals(Model.Friendship.UserName1) || @User.Identity.Name.Equals(Model.Friendship.UserName2)
+    if (@User.Identity.Name.Equals(Model.UserName) || 2==2)
+    {
+<fieldset>
+    <legend>@Model.UserName</legend>
+     <div class="pic_right_top">
+    <div class="display-field">
+       <img src="@Html.DisplayFor(model => model.UserPic)" width="300px" height="300px" /> 
+    </div>
+    </div>
+         <div class="display-label">UserName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName)
+    </div>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">Bio</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Bio)
+    </div>
+
+    <div class="display-label">Email Address</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmailAddress)
+    </div>
+
+    <div class="display-label">Address</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Adress)
+    </div>
+
+</fieldset>
+    }else{
+    <p>This person is not your friend, so get hell of out here </p>
+    }
+ }
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.UserID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>        

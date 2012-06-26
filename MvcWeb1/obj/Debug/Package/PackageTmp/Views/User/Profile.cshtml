@@ -1,0 +1,53 @@
+﻿@model MvcWeb1.Models.User
+
+@{
+    ViewBag.Title = "Profile";
+}
+
+<h2>Profile</h2>
+@{
+    if (@User.Identity.Name.Equals(Model.UserName))
+    {
+<fieldset>
+    <legend>User</legend>
+         <div class="pic_right_top">
+    <div class="display-field">
+       <img src="@Html.DisplayFor(model => model.UserPic)" width="300px" height="300px" /> 
+    </div>
+    </div>
+    <div class="display-label">UserName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName)
+    </div>
+
+    <div class="display-label">Adress</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Adress)
+    </div>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">EmailAddress</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmailAddress)
+    </div>
+
+    <div class="display-label">Bio</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Bio)
+    </div>
+
+    <div class="display-label">DateUpdated</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateUpdated)
+    </div>
+</fieldset>
+    }
+}
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.UserID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
